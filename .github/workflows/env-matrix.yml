@@ -7,6 +7,11 @@ jobs:
     strategy:
       matrix:
         node_version: [6, 8, 10]
+        include:
+          - node_version: 6
+            version: "6"
+        exclude:
+          - node_version: 8
     runs-on: ubuntu-latest
     steps:
       - name: Log node version
