@@ -1,0 +1,16 @@
+name: Shell Commands
+
+on: 
+  push:
+    branches:
+      - master
+      - "feature/*" 
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test echo
+        run: echo "Testing"
+
+    
