@@ -1,0 +1,20 @@
+name: Shell Commands
+
+on: ["push","pull_request"]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Failing step
+        run: eccho "Shall never run"
+      - name: Run if above step fails
+        if: failure()
+        run: echo "run when step fails"
+  run-on-pull-request:
+    runs-on: ubuntu-latest
+    if: github.event_name == "pull_request"
+    steps:
+      - name: test echo
+        run: echo "Testing expressions"
+    
