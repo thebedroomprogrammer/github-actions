@@ -13,7 +13,7 @@ jobs:
         run: echo "run when step fails"
   run-on-pull-request:
     runs-on: ubuntu-latest
-    if: github.event_name == "pull_request"
+    if: github.event_name == 'pull_request'
     steps:
       - name: test echo
         run: echo "Testing expressions"
