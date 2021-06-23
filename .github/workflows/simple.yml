@@ -1,21 +1,21 @@
-name: Shell Commands
+# name: Shell Commands
 
-on: ["push"]
+# on: ["push"]
 
-jobs:
-  run-shell-command:
-    runs-on: ubuntu-latest
-    steps:
-      - name: test echo
-        run: echo "Testing test 1"
-      - name: test echo
-        run: |
-          node -v
-          npm -v
-  run-shell-command-after:
-    needs: ["run-shell-command"]
-    runs-on: ubuntu-latest
-    steps:
-      - name: test echo
-        run: echo "Testing after echo"
+# jobs:
+#   run-shell-command:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: test echo
+#         run: echo "Testing test 1"
+#       - name: test echo
+#         run: |
+#           node -v
+#           npm -v
+#   run-shell-command-after:
+#     needs: ["run-shell-command"]
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: test echo
+#         run: echo "Testing after echo"
     
